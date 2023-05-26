@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>メニューバー</title>
+  <style>
+    /* メニューバーのスタイル */
+    .navbar {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      padding: 10px 20px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .navbar li a:hover {
+      background-color: #555;
+    }
+
+    /* メニューボタンのスタイル */
+    .menu-button {
+      display: none; /* メディアクエリで表示するため初期は非表示 */
+      background-color: transparent;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .menu-button::before,
+    .menu-button::after {
+      content: '';
+      display: block;
+      background-color: #fff;
+      height: 3px;
+      width: 20px;
+      border-radius: 2px;
+    }
+
+    .menu-button::before {
+      margin-bottom: 5px;
+    }
+
+    .menu-button::after {
+      margin-top: 5px;
+    }
+
+    /* メニューボタンを表示するためのメディアクエリ */
+    @media (max-width: 768px) {
+      .navbar li:not(:first-child) {
+        display: none; /* メディアクエリで非表示にする */
+      }
+      .menu-button {
+        display: block; /* メディアクエリで表示する */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <button class="menu-button"></button> <!-- メニューボタンの追加 -->
+    <ul>
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">サービス</a></li>
+      <li><a href="#">製品</a></li>
+      <li><a href="#">会社概要</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </div>
+
+  <!-- メニューバーのJavaScript -->
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navbarList = document.querySelector('.navbar ul');
+
+    menuButton.addEventListener('click', () => {
+      navbarList.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
