@@ -219,3 +219,24 @@
 #modal.active img {
     transform: scale(2);
 }
+
+.videotext {
+  text-align: center;
+  font-weight: bold;
+  color:#ffffff;
+
+  margin-top: 400px;
+  font-weight: 900;
+}
+
+.text {
+  font-size: medium;
+  /* text-align: center; */
+  position: absolute;
+}
+
+.texttitle {
+  font-size: 5rem;
+  font-weight: 900;
+  /* text-align: center; */
+}
