@@ -228,15 +228,26 @@
 
   margin-top: 400px;
   font-weight: 900;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .text {
   font-size: medium;
   text-align: center;
-  position: absolute;
+  position: relative;
+  /* top: 10px; 適宜調整してください */
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 250px;
 }
 .texttitle {
   font-size: 5rem;
   font-weight: 900;
   text-align: center;
+  position: absolute;
 }
+
