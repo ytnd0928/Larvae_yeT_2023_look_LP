@@ -24,6 +24,7 @@
     margin: 0;
     width: 100%;
       height: auto;
+    position: relative;
   }
 
   .logo {
@@ -51,11 +52,10 @@
   background-color: #ffffff;
 }
 
-
 .back {
     background-color: black;
      position: relative;
-     height:340vh;
+     height:400vh;
 }
 
 .grid-container {
@@ -135,7 +135,7 @@
 
   #bg {
     position: relative; /*h1の中央寄せ配置の起点とするためのrelative*/
-    height: 100vh; /*高さを全画面にあわせる*/
+    height: 200vh; /*高さを全画面にあわせる*/
   }
   #bg-video {
     position: fixed;
